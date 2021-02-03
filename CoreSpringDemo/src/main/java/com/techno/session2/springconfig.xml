@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema//context/spring-context.xsd
+   http://www.springframework.org/schema/util
+   http://www.springframework.org/schema//util/spring-util.xsd">
+	<bean class="com.techno.session2.Student" name="std">
+		<property name="id" value="101" />
+		<property name="name">
+			<value>gaurav</value>
+		</property>
+		<property name="name1">
+			<list>
+				<value>gaurav</value>
+				<value>gaurav</value>
+				<value>gaurav</value>
+			</list>
+		</property>
+		<property name="name2">
+			<set>
+				<value>gaurav1</value>
+				<value>gaurav2</value>
+				<value>gaurav3</value>
+			</set>
+		</property>
+		<property name="name3">
+			<map>
+			<entry key="name11" value="gaurav"></entry>
+			
+			<entry key="name22" value="gaurav"></entry>
+			
+			<entry key="name33" value="gaurav"></entry>
+			</map>
+		</property>
+		<property name="props">
+			<props>
+				<prop key="name11">gaurav</prop>
+				<prop key="name22">gaurav</prop>
+				<prop key="name33">gaurav</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
+	
