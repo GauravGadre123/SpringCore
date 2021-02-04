@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema//context/spring-context.xsd
+   http://www.springframework.org/schema/util
+   http://www.springframework.org/schema//util/spring-util.xsd">
+
+	<util:list list-class="java.util.LinkedList" id="list1">
+		<value> gaurav</value>
+		<value> gaurav</value>
+		<value> gaurav</value>
+	</util:list>
+
+	<util:set set-class="java.util.HashSet" id="set1">
+		<value> gaurav1</value>
+		<value> gaurav2</value>
+		<value> gaurav3</value>
+	</util:set>
+
+	<util:map id="map1">
+		<entry key="abc" value="xyz" />
+		<entry key="abc1" value="xyz1" />
+		<entry key="abc2" value="xyz2" />
+	</util:map>
+
+	<util:properties id="prop1">
+		<prop key="abc1">xyz</prop>
+		<prop key="abc2">xyz1</prop>
+		<prop key="abc3">xyz2</prop>
+	</util:properties>
+
+	<bean class="com.techno.session3.Student" name="std">
+		<property name="id" value="101" />
+		<property name="name">
+			<value>gaurav</value>
+		</property>
+		<!-- <property name="name1"> <ref bean="list1"></ref> </property> -->
+
+		<property name="name1" ref="list1" />
+
+		<property name="name2" ref="set1" />
+
+		<property name="name3" ref="map1" />
+
+		<property name="name4" ref="prop1" />
+
+	</bean>
+
+</beans>
+	
